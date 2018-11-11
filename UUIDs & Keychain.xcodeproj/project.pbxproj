@@ -12,6 +12,7 @@
 		C152B4962197EB0F00FB8F57 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C152B4942197EB0F00FB8F57 /* Main.storyboard */; };
 		C152B4982197EB1000FB8F57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C152B4972197EB1000FB8F57 /* Assets.xcassets */; };
 		C152B49B2197EB1000FB8F57 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C152B4992197EB1000FB8F57 /* LaunchScreen.storyboard */; };
+		C152B4A42197EBDF00FB8F57 /* CopyableLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C152B4A32197EBDF00FB8F57 /* CopyableLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,8 @@
 		C152B4972197EB1000FB8F57 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C152B49A2197EB1000FB8F57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C152B49C2197EB1000FB8F57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C152B4A22197EB1800FB8F57 /* UUIDs & Keychain.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "UUIDs & Keychain.entitlements"; sourceTree = "<group>"; };
+		C152B4A32197EBDF00FB8F57 /* CopyableLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CopyableLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,8 +57,10 @@
 		C152B48F2197EB0F00FB8F57 /* UUIDs & Keychain */ = {
 			isa = PBXGroup;
 			children = (
+				C152B4A22197EB1800FB8F57 /* UUIDs & Keychain.entitlements */,
 				C152B4902197EB0F00FB8F57 /* AppDelegate.swift */,
 				C152B4922197EB0F00FB8F57 /* ViewController.swift */,
+				C152B4A32197EBDF00FB8F57 /* CopyableLabel.swift */,
 				C152B4942197EB0F00FB8F57 /* Main.storyboard */,
 				C152B4972197EB1000FB8F57 /* Assets.xcassets */,
 				C152B4992197EB1000FB8F57 /* LaunchScreen.storyboard */,
@@ -96,6 +101,11 @@
 				TargetAttributes = {
 					C152B48C2197EB0F00FB8F57 = {
 						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -137,6 +147,7 @@
 			files = (
 				C152B4932197EB0F00FB8F57 /* ViewController.swift in Sources */,
 				C152B4912197EB0F00FB8F57 /* AppDelegate.swift in Sources */,
+				C152B4A42197EBDF00FB8F57 /* CopyableLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,8 +293,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "UUIDs & Keychain/UUIDs & Keychain.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZBNB4ZFFP9;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "UUIDs & Keychain/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -291,6 +304,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "kidnapper.UUIDs---Keychain";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -300,8 +314,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "UUIDs & Keychain/UUIDs & Keychain.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZBNB4ZFFP9;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "UUIDs & Keychain/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -309,6 +325,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "kidnapper.UUIDs---Keychain";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
